@@ -1,0 +1,109 @@
+body {
+  font-family: arial;
+}
+
+.header {
+  padding: 10px;
+  background: #1abc9c;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
+
+.footer {
+   padding: 30px;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:#1abc9c;
+   color: white;
+   text-align: center;
+}
+
+fieldset {
+  background-color: #1abc9c;
+  width: 35%;
+  padding: 30px;
+  margin-top: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 5px;
+  text-align: center;
+}
+
+legend {
+  text-align: center;
+  background-color: white;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+input[type=text], input[type=password], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.1s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white; 
+  color: black; 
+  border: #4CAF50;
+}
+
+.button{
+  background-color: #4CAF50;
+  color: white;
+}
