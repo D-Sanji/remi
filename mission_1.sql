@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 03 mai 2022 à 12:20
+-- Généré le : mer. 04 mai 2022 à 12:10
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.3.21
 
@@ -35,20 +35,22 @@ CREATE TABLE IF NOT EXISTS `taches` (
   `NivPrio` int(11) NOT NULL,
   `id_Resp` int(11) NOT NULL,
   `id_Employe` int(11) DEFAULT NULL,
-  `Libelle_Statut` text NOT NULL,
+  `Libelle_Statut` text DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `id_Resp` (`id_Resp`),
   KEY `id_Employe` (`id_Employe`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `taches`
 --
 
 INSERT INTO `taches` (`id`, `NomTache`, `Etat`, `NivPrio`, `id_Resp`, `id_Employe`, `Libelle_Statut`) VALUES
-(1, 'Remplacement Ampoule salle réunion', 'en cours', 2, 1, 2, ''),
-(2, 'réparer imprimante', 'en attente', 3, 1, 1, ''),
-(3, 'changer écran secrétaire', 'en attente', 2, 2, 2, 'le nouvel écran n\'est pas encore arrivé');
+(7, 'changer poubelle moche', 'en attente', 2, 1, 1, NULL),
+(8, 'changer imprimante', 'en attente', 2, 1, 3, NULL),
+(9, 'changer ampoule', 'en cours ', 1, 1, 5, NULL),
+(10, 'reparer PC secretaire', 'en cours', 3, 1, 3, NULL),
+(12, 'changer ecran salle reunion', 'en attente', 2, 1, 5, NULL);
 
 -- --------------------------------------------------------
 
@@ -65,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `Prenom` text NOT NULL,
   `Role` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `user`
@@ -74,7 +76,9 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`id`, `Pseudo`, `MotDePasse`, `Nom`, `Prenom`, `Role`) VALUES
 (1, 'remi.libessart', 'admin', 'Libessart', 'Rémi', 'administrateur'),
 (2, 'remi', 'admin', 'Libessart', 'Rémi', 'utilisateur'),
-(3, 'remilib', 'admin', 'Libessart', 'Remi', 'employé');
+(3, 'remilib', 'admin', 'Libessart', 'Remi', 'employe'),
+(4, 'remilibessart', 'admin', 'Libessart', 'Remi', 'administrateur'),
+(5, 'rlibessart', 'admin', 'Libessart', 'Remi', 'employe');
 
 --
 -- Contraintes pour les tables déchargées

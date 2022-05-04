@@ -31,7 +31,7 @@ session_start();
                             $row = mysqli_fetch_array($result);
                                 if ($row["role"] == "administrateur") {
                                     header("location:EspaceAdmin.php");
-                                } elseif ($row["role"] == "employé") {                             
+                                } elseif ($row["role"] == "employe") {                             
                                     header("location:EspaceEmployé.php");
                                 } else {
                                     header("location:EspaceUtilisateur.php");

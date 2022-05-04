@@ -1,8 +1,3 @@
-<?php
-$mysqli=mysqli_connect('localhost','root','','mission_1');
-$result = mysqli_query($mysqli, "SELECT * FROM taches ORDER BY id");
-?>
-
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -10,7 +5,14 @@ $result = mysqli_query($mysqli, "SELECT * FROM taches ORDER BY id");
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <a href="Deconnexion.php">Déconnexion</a><br/><br/>
-        <a href="FormulaireTache.php">Ajouter une tache</a><br/><br/>
+    <header class="header">
+        <h1>Création de taches</h1>
+        <a href="Deconnexion.php" class="button">Déconnexion</a>
+        <a href="FormulaireTache.php" class="button">Ajouter une tache</a><br/><br/>
+        Vous êtes un Utilisateur
+    </header>
+    <footer class="footer">
+    Créer par Rémi LIBESSART
+    </footer>
     </body>
 </html>

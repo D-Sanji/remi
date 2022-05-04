@@ -2,19 +2,19 @@
 
 include 'connect.php';
 $mysqli=mysqli_connect('localhost','root','','mission2.2');
-$result = mysqli_query($mysqli, "SELECT * FROM reservation ORDER BY jour ASC, heuredebut ASC");
+$nom=$_GET['nom'];
+$result = mysqli_query($mysqli, "SELECT * FROM reservation WHERE id_salle='$nom' ORDER BY jour ASC, heuredebut ASC");
 ?>
 
 <html>
 <head>  
-    <title>Planning</title>
+    <title>Planning de la salle</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 <header class="header">
-    <h1>Réservation de salle</h1>
-    <a href="FormulaireReservation.php" class="button">Réserver une salle</a>
+    <h1>Planning de la salle <?php echo $nom;?></h1>
     <a href="ListeSalle.php" class="button">Liste des salles</a>
     <a href="Deconnexion.php" class="button">Déconnexion</a><br/><br/>
 </header>

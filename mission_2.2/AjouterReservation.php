@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>Ajouter Réservation</title>
+	<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -38,9 +39,9 @@ if(isset($_POST['Submit'])) {
 	
 
 	} else { 	
-		$result = mysqli_query($mysqli, "INSERT INTO reservation('jour','heuredebut','heurefin','id_salle','id_reserveur') VALUES('$jour','$heuredebut','$heurefin','$salle','$utilisateur')");
+		$result = mysqli_query($mysqli, "INSERT INTO reservation(jour,heuredebut,heurefin,id_salle,id_reserveur) VALUES('$jour','$heuredebut','$heurefin','$salle','$utilisateur')");
 
-
+		echo "$jour";
 		echo "$heuredebut";
 		echo "<font color='green'>Ajouter avec succès.";
 		echo "<br/><a href='planning.php'>Voir le planning</a>";

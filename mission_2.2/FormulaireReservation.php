@@ -7,7 +7,7 @@
 <body>
 <header class="header">
     <h1>Réservation de salle</h1>
-    <a href="FormulaireReservation.php" class="button">Réserver une salle</a>
+    <a href="planning.php" class="button">Planning</a>
     <a href="Deconnexion.php" class="button">Déconnexion</a><br/><br/>
 </header>
 
@@ -17,18 +17,18 @@
 				<td class="form">Salle</td>
 				<td><select name="salle" id="salle" style="width:160px" class="form">
  
-<?php
-$mysqli=mysqli_connect('localhost','root','','mission2.2');
-$reponse = $mysqli->query('SELECT * FROM salle');
+				<?php
+				$mysqli=mysqli_connect('localhost','root','','mission2.2');
+				$reponse = $mysqli->query('SELECT * FROM salle');
  
-while ($donnees = mysqli_fetch_array($reponse)) {
-?>
+				while ($donnees = mysqli_fetch_array($reponse)) {
+				?>
 
-<option value="<?php echo $donnees['nom']; ?>"><?php echo $donnees['nom']; ?></option>
+				<option value="<?php echo $donnees['nom']; ?>"><?php echo $donnees['nom']; ?></option>
 
-<?php
-}
-?>
+				<?php
+				}
+				?>
 				</td>
 			</tr>
 			<tr> 

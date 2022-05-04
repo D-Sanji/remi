@@ -11,8 +11,11 @@ $result = mysqli_query($mysqli, "SELECT * FROM taches ORDER BY id");
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <a href="Deconnexion.php">Déconnexion</a><br/><br/>
-        Vous êtes employé
+        <header class="header">
+        <h1>Réservation de taches</h1>
+        <a href="Deconnexion.php" class="button">Déconnexion</a><br/><br/>
+        Vous êtes Employé
+        </header>
 
 <table width='80%' border=0>
 
@@ -42,5 +45,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM taches ORDER BY id");
     }
     ?>
     </table>
+    <footer class="footer">
+    Créer par Rémi LIBESSART
+    </footer>
     </body>
 </html>

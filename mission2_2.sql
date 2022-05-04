@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 03 mai 2022 à 12:20
+-- Généré le : mer. 04 mai 2022 à 12:10
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.3.21
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `id_reserveur` varchar(150) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_salle` (`id_salle`,`id_reserveur`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `reservation`
@@ -47,7 +47,8 @@ INSERT INTO `reservation` (`id`, `jour`, `heuredebut`, `heurefin`, `id_salle`, `
 (4, '2022-03-26', '10:00:00', '11:00:00', 'amphitheatre', 'remi.libessart'),
 (5, '2022-03-26', '08:00:00', '09:00:00', 'amphitheatre', 'remi.libessart'),
 (6, '2022-03-29', '08:00:00', '09:00:00', 'amphitheatre', 'remi.libessart'),
-(7, '2022-03-29', '17:00:00', '18:00:00', 'salle reunion 8', 'remi.libessart');
+(7, '2022-03-29', '17:00:00', '18:00:00', 'salle reunion 8', 'remi.libessart'),
+(25, '2022-05-04', '10:00:00', '11:00:00', 'salle reunion 7', 'remi.libessart');
 
 -- --------------------------------------------------------
 
@@ -60,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `salle` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `salle`

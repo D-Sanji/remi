@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>Ajouter Taches</title>
+	<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
